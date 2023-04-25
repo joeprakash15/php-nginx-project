@@ -13,7 +13,7 @@ node {
         }
     }
     stage ("Php application Deployment") {
-        sh "ssh ubuntu@35.78.115.235 docker rm -f php-demo1 || true"
-        sh "ssh ubuntu@35.78.115.235 docker run -d -p 8006:80 --name php-demo joeprakashsoosai/php-project:${buildNumber}"
+        sh "docker rm -f php-demo1 || true"
+        sh "docker run -d -p 8006:80 --name php-demo joeprakashsoosai/php-project:${buildNumber}"
     }
 }
