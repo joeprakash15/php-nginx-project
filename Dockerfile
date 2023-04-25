@@ -10,10 +10,10 @@ RUN apt-get update && \
 # Install sudo command
 RUN apt-get update && apt-get install -y sudo
 # Copy your shell script to the container
-COPY my-script.sh /usr/local/bin/
+COPY myscript.sh /usr/local/bin/
 
 # Make the script executable
-RUN chmod +x /usr/local/bin/my-script.sh && /usr/local/bin/my-script.sh
+RUN chmod +x /usr/local/bin/myscript.sh && /usr/local/bin/myscript.sh
 
 # Run the script
 #RUN /usr/local/bin/my-script.sh
